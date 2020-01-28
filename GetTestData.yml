@@ -6,6 +6,6 @@
 
   tasks:
     - name: "Get the Linux version"
-      commad: uname -a
+      command: uname -a
       register: result1
     - debug : msg=" Linux Version {{ result1 }}"
