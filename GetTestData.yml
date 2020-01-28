@@ -1,0 +1,11 @@
+- name: Test Play
+  hosts: all
+  gather_facts: False
+  serial: 1
+
+
+  tasks:
+    - name: "Get the Linux version"
+      commad: uname -a
+      register: result1
+    - debug : msg=" Linux Version {{ result1 }}"
